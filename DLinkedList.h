@@ -1,4 +1,4 @@
-#ifdef _D_LINKED_LIST_H_
+#ifndef _D_LINKED_LIST_H_
 #define _D_LINKED_LIST_H_
 
 #define TRUE 1
@@ -25,6 +25,6 @@ int LFirst(List* plist,LData* pdata);
 int LNext(List* plist,LData* pdata);
 LData LRemove(List* plist);
 int LCount(List* plist);
-void SetSortRule(List* plist, int (*comp)(LData D1, LData D2));
+//void SetSortRule(List* plist, int (*comp)(LData D1, LData D2));
 
 #endif
