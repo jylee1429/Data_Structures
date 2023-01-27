@@ -16,16 +16,21 @@ void FInsert(List* plist,LData data){
 	newNode->next=plist->head->next;
 	plist->head->next=newNode;
 
-	plist->NumOfData++;
+	(plist->NumOfData)++;
+}
+
+void SInsert(List* plist,LData data){
+
 }
 
 void LInsert(List* plist,LData data){
 	if(plist->comp==NULL){
 		FInsert(plist,data);
 	}	
-	//else
-		//SInsert(plist,data);
+	else
+		SInsert(plist,data);
 }
+
 
 int LFirst(List* plist,LData* pdata){
 	if(plist->head->next==NULL)
@@ -54,7 +59,6 @@ LData LRemove(List* plist){
 	free(rpos);
 	(plist->NumOfData)--;
 	return rdata;
-
 }
 
 int LCount(List* plist){

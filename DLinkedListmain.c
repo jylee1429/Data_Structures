@@ -21,16 +21,18 @@ int main(void){
 	}
 
 	if(LFirst(&list,&data)){
-		if(data==2){
+		if(data==22){
 			LRemove(&list);
 		}
 		while(LNext(&list,&data)){
-			if(data==2)
+			if(data==22){
 				LRemove(&list);
+			}
 		}
 	
 	}
 	printf("현재 데이터 개수 : %d\n",LCount(&list));
+	
 	if(LFirst(&list,&data)){
 		printf("%d ",data);
 		while(LNext(&list,&data)){
