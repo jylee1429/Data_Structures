@@ -7,8 +7,8 @@
 typedef int Data;
 typedef struct _node{
 	Data data;
-	struct* _node right;
-	struct* _node left;
+	struct _node* right;
+	struct _node* left;
 }Node;
 
 typedef struct _DBDLinkedList{
@@ -18,7 +18,7 @@ typedef struct _DBDLinkedList{
 	int numOfData;
 }DBDLinkedList;
 
-typedef DBDLikedList List;
+typedef DBDLinkedList List;
 
 void ListInit(List* plist);
 void LInsert(List* plist, Data data);

@@ -21,9 +21,8 @@ void LInsert(List* plist,Data data){
 		plist->tail->left=newNode;
 	}
 	newNode->right=plist->head->right;
-	plist->head->right->left=newNode;
 	plist->head->right=newNode;
-	newNode->left=plist->head;
+	
 
 	(plist->numOfData)++;
 
@@ -52,4 +51,12 @@ int LLeft(List* plist,Data* pdata){
 	*pdata=plist->cur->data;
 	return TRUE;
 
+}
+
+Data LRemove(List* plist){
+	
+
+}
+int LCount(List* plist){
+	return plist->numOfData;
 }
