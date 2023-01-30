@@ -4,7 +4,7 @@
 
 int main(void){
 	List list;
-	Data data;
+	int data;
 
 	ListInit(&list);
 
@@ -19,7 +19,23 @@ int main(void){
 
 	if(LFirst(&list,&data)){
 		printf("%d ",data);
+		while(LRight(&list,&data)){
+			printf("%d ",data);
+		}
 	}
+
+	printf("\n");
+
+	if(LFirst(&list,&data)){
+		if(data==3)
+			LRemove(&list);
+		while(LRight(&list,&data)){
+			if(data==3)
+				LRemove(&list);
+		}
+	}
+	printf("%d\n",LCount(&list));
+
 	return 0;
 
 }

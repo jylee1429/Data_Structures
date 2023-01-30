@@ -23,7 +23,8 @@ typedef DBDLinkedList List;
 void ListInit(List* plist);
 void LInsert(List* plist, Data data);
 int LFirst(List* plist,Data* pdata);
-int LNext(List* plist,Data* pdata);
+int LRight(List* plist,Data* pdata);
+int LLeft(List* plist,Data* data);
 Data LRemove(List* plist);
 int LCount(List* plist);
 
